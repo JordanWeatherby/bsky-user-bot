@@ -1,7 +1,6 @@
 import { BskyAgent } from '@atproto/api';
 import * as dotenv from 'dotenv';
 import { join } from 'path';
-// import { CronJob } from 'cron';
 import * as process from 'process';
 
 dotenv.config({ path: join(__dirname, '.env')} );
@@ -46,12 +45,3 @@ const main = async () => {
 }
 
 main();
-
-
-// Run this on a cron job
-// const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
-// const scheduleExpression = '0 */1 * * *'; // Run once an hour in prod
-
-// const job = new CronJob(scheduleExpression, main); // change to scheduleExpressionMinute for testing
-
-// job.start();
